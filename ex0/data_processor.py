@@ -93,7 +93,7 @@ class LogProcessor(DataProcessor):
 def main() -> None:
     print("=== Code Nexus Data Processor ===")
 
-    print("\nTesting Numeric Processor.")
+    print("\nTesting Numeric Processor...")
     num_proc = NumericProcessor()
     print(f"Trying to validate input '42': {num_proc.validate(42)}")
     print(f"Trying to validate input 'Hello': {num_proc.validate('Hello')}")
@@ -107,7 +107,7 @@ def main() -> None:
     print("Extracting 3 values...")
     for _ in range(3):
         rank, val = num_proc.output()
-        print(f"Numeric value {rank}:\n{val}")
+        print(f"Numeric value {rank}: {val}")
 
     print("\nTesting Text Processor")
     text_proc = TextProcessor()
@@ -121,7 +121,6 @@ def main() -> None:
     print("\nTesting Log Processor.")
     log_proc = LogProcessor()
     print(f"Trying to validate input 'Hello': {log_proc.validate('Hello')}")
-
     logs = [
         {'log_level': 'NOTICE', 'log_message': 'Connection to server'},
         {'log_level': 'ERROR', 'log_message': 'Unauthorized access!!!'}
