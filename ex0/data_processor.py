@@ -109,7 +109,7 @@ def main() -> None:
         rank, val = num_proc.output()
         print(f"Numeric value {rank}:\n{val}")
 
-    print("Testing Text Processor")
+    print("\nTesting Text Processor")
     text_proc = TextProcessor()
     print(f"Trying to validate input '42': {text_proc.validate(42)}")
     print("Processing data: ['Hello', 'Nexus', 'World']")
@@ -118,7 +118,7 @@ def main() -> None:
     rank, val = text_proc.output()
     print(f"Text value {rank}: {val}")
 
-    print("Testing Log Processor.")
+    print("\nTesting Log Processor.")
     log_proc = LogProcessor()
     print(f"Trying to validate input 'Hello': {log_proc.validate('Hello')}")
 
