@@ -115,7 +115,7 @@ class JSONExportPlugin:
         for rank, val in data:
             clean_val = val.replace('\n', '\\n')
             json_parts.append(f'"item_{rank}": "{clean_val}"')
-        json_string = "{" + ". ".join(json_parts) + "}"
+        json_string = "{" + ", ".join(json_parts) + "}"
         print(json_string)
 
 
