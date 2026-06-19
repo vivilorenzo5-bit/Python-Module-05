@@ -122,9 +122,7 @@ class DataStream:
 
         for proc in self._processors:
             name = proc.__class__.__name__
-            if name == "NumericProcessor" or name == "TextProcessor":
-                name = name.replace("Processor", " Processor")
-            elif name == "LogProcessor":
+            if name in ("NumericProcessor", "TextProcessor", "LogProcessor"):
                 name = name.replace("Processor", " Processor")
 
             total = proc._counter
